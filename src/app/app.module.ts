@@ -5,6 +5,7 @@ import { Routes, RouterModule, RouterLink } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { PessoaComponent } from './pessoa/pessoa.component';
+import { PessoaService } from './pessoa/pessoa.service';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   },
   {
       path: 'pessoa',
+      component: PessoaComponent
+  },
+  {
+      path: 'carro',
       component: PessoaComponent
   }   
 ];
@@ -28,7 +33,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [PessoaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
