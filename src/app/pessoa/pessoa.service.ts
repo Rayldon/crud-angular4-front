@@ -14,7 +14,7 @@ export class PessoaService {
 
   getPessoas(): Observable<Pessoa[]> {
     return this.http
-        .get("http://172.25.141.68:8080/crud/rest/pessoa/consulta")
+        .get("../rest/pessoa/consulta")
         .map(response => response.json())
         .catch(this.handleError);
   }

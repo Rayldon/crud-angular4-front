@@ -1,7 +1,12 @@
-
-  <div *ngFor="let item of pessoas">
-    <span>{{item.nome}}</span>
-    <span>{{item.idade}}</span>
-    <span>{{item.cpf}}</span>
-    <span>{{item.telefone2}}</span>
-  </div>
+<table style="width:50%;border:1px solid;">
+	<th>Nome</th>
+	<th>Idade</th>
+	<th>CPF</th>
+	<th>Telefone</th>
+	<tr *ngFor="let item of pessoas" align="center">
+		<td>{{item.nome}}</td>
+		<td>{{item.idade}}</td>
+		<td>{{item.cpf}}</td>
+		<td>{{item.telefone2}}</td>
+	</tr>
+<table>
